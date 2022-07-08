@@ -1,8 +1,5 @@
 {
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
-  "/api/getGroupedDaily": "pages/api/getGroupedDaily.js",
-  "/": "pages/index.js",
-  "/styles": "pages/styles.js",
   "/_document": "pages/_document.js"
 }

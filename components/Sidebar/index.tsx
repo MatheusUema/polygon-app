@@ -6,23 +6,22 @@ import {StockList, Stock } from '../StockList';
 import { TickerList } from '../TickerList';
 import 'react-calendar/dist/Calendar.css';
 import { BsCalendar3 } from 'react-icons/bs';
+import { useAggregate } from '../../pages/hooks/useAggregate';
 
 import { getGroupedDaily } from '../../pages/api/getGroupedDaily';
-interface ISidebarProps {
-  graphContainerRef: React.RefObject<HTMLDivElement>;
-}
+import { getAggregates } from '../../pages/api/getAggregates';
 
-export const Sidebar = ({graphContainerRef}: ISidebarProps): JSX.Element => {
+export const Sidebar = (): JSX.Element => {
   const [stocks, setStocks] = useState<Stock[]>([]);
   const [calendar, setCalendar] = useState<boolean>(false);
   const [chosenDate, setChosenDate] = useState<Date>(new Date);
   const [loading, setLoading] = useState<boolean>(false);
   const tickerRef = useRef<HTMLInputElement>(null);
+  const { setAggregate } = useAggregate();
 
-  const generateChart = useCallback((value) => {
-    console.log(value);
-    console.log(tickerRef.current.value)
-    console.log(graphContainerRef)
+  const generateChart = useCallback(() => {
+    console.log(tickerRef.current.value);
+    getAggregates(tickerRef.current.value).then(setAggregate);
   }, []);
 
   useEffect(() => {

@@ -3,16 +3,11 @@ import React from 'react';
 import { GraphContainer } from '../GraphContainer';
 import { Container } from './styles';
 
-interface IMainSectionProps {
-  graphContainerRef: React.RefObject<HTMLDivElement>;
-}
-
-export const MainSection = ({graphContainerRef}: IMainSectionProps): JSX.Element => {
+export const MainSection = (): JSX.Element => {
 
   return (
     <Container>
-      <GraphContainer graphContainerRef={graphContainerRef} >
-      </GraphContainer>
+      <GraphContainer />
     </Container>
   )
 };
