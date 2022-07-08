@@ -1,6 +1,6 @@
 import React from 'react';
 import Plot from 'react-plotly.js';
-import { useAggregate } from '../../pages/hooks/useAggregate';
+import { useAggregate } from '../../hooks/useAggregate';
 
 import { Container, InnerSection } from './styles';
 

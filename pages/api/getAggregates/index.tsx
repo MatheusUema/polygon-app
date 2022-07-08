@@ -1,6 +1,6 @@
 import axios  from 'axios'
 import { convertDate } from '../../../utils/convert-date';
-import { IAggregate } from '../../hooks/useAggregate';
+import { IAggregate } from '../../../hooks/useAggregate';
 
 export const getGroupedDaily = async (date: Date) => {
     const today = new Date();

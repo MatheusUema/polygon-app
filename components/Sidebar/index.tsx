@@ -6,7 +6,7 @@ import {StockList, Stock } from '../StockList';
 import { TickerList } from '../TickerList';
 import 'react-calendar/dist/Calendar.css';
 import { BsCalendar3 } from 'react-icons/bs';
-import { useAggregate } from '../../pages/hooks/useAggregate';
+import { useAggregate } from '../../hooks/useAggregate';
 
 import { getGroupedDaily } from '../../pages/api/getGroupedDaily';
 import { getAggregates } from '../../pages/api/getAggregates';
