@@ -1,15 +1,26 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
+import React, {useRef} from 'react'
+import { AppContainer} from '../components/AppContainer';
+import { Header } from '../components/Header';
+import { Sidebar } from '../components/Sidebar';
+import { Main } from './styles';
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+import dynamic from 'next/dynamic'
+
+const MainSection = dynamic(import('../components/MainSection'), {
+  ssr: false
+})
+
+export const IndexPage = () => { 
+  const graphContainerRef = useRef<HTMLDivElement>(null)
+
+  return (
+    <AppContainer>
+      <Header />  
+      <Main>
+        <MainSection graphContainerRef={graphContainerRef} />
+        <Sidebar graphContainerRef={graphContainerRef} />
+      </Main>
+    </AppContainer>
+)}
 
 export default IndexPage
