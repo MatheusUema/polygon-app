@@ -1,14 +1,14 @@
 {
   "../node_modules/next/dist/client/index.js -> ../pages/_error": {
-    "id": "../node_modules/next/dist/client/index.js -> ../pages/_error",
+    "id": 9651,
     "files": [
-      "static/chunks/node_modules_next_dist_pages__error_js.js"
+      "static/chunks/651.bd3ee586694c39ed.js"
     ]
   },
   "index.tsx -> ../components/MainSection": {
-    "id": "index.tsx -> ../components/MainSection",
+    "id": 6434,
     "files": [
-      "static/chunks/components_MainSection_index_tsx.js"
+      "static/chunks/434.6217b735029f3d43.js"
     ]
   }
 }

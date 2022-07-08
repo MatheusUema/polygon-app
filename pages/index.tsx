@@ -2,7 +2,7 @@ import React, {useRef} from 'react'
 import { AppContainer} from '../components/AppContainer';
 import { Header } from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
-import { Main } from './styles';
+import { Main } from '../public/styles';
 
 import dynamic from 'next/dynamic'
 
