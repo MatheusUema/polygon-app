@@ -8,7 +8,7 @@ export const Header = (): JSX.Element => {
   return (
     <HeaderContainer>
       <HeaderIcon />
-      <h1>Polygon App</h1>
+      <h1>Ingress Project</h1>
     </HeaderContainer>
   )
 };

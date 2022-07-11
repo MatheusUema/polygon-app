@@ -17,7 +17,11 @@ const chartlines = keyframes`
 
 
 export const Container = styled.div`
-
+    
+    width: 100px;
+    margin-right: 16px;
+    margin-left: 22px;
+    
     .chart-icon {
         width: 30px;
         margin-right: 24px;

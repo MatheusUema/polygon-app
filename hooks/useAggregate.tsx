@@ -4,6 +4,7 @@ import React, {
 
   
 export interface IAggregate {
+    name: string;
     dates: string[];
     close: number[];
     high: number[];

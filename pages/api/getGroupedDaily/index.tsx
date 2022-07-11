@@ -5,7 +5,7 @@ export const getGroupedDaily = async (date: Date) => {
     const today = new Date();
     let apiDate = new Date(today);
     if(date.toDateString === today.toDateString){
-        apiDate.setDate(today.getDate() - 2);
+        apiDate.setDate(today.getDate() - 3);
     } else {
         apiDate = date;
     }

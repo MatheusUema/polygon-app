@@ -24,9 +24,8 @@ export const ItemList = styled.div<IItemListProps>`
     background-color: #f2f2f2;
 
     &:nth-child(1){
-        margin-top: 8px;
-        color: black;
-        background-color: #818181;
+        color: white;
+        background-color: #05132a;
     }
 
     color: ${(props) => props.positive ? 'green' : 'red'};

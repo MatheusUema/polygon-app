@@ -16,6 +16,7 @@ export const getGroupedDaily = async (date: Date) => {
 
 export const getAggregates = async (ticker: string) => {
     const data :IAggregate = {
+        name: '',
         dates: [],
         high: [],
         low: [],
@@ -24,6 +25,7 @@ export const getAggregates = async (ticker: string) => {
     };
     await axios.get(`https://api.polygon.io/v2/aggs/ticker/${ticker}/range/1/day/2020-08-01/2022-07-08?adjusted=true&sort=asc&apiKey=${process.env.NEXT_PUBLIC_POLYGON_API_KEY}`).then(response => {
         const res = response.data.results;
+        data.name = response.data.ticker;
         res.forEach((aggregate) => {
             data.close.push(aggregate.c);
             data.high.push(aggregate.h);

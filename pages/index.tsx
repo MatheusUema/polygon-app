@@ -3,6 +3,7 @@ import { AppContainer} from '../components/AppContainer';
 import { Header } from '../components/Header';
 import { Sidebar } from '../components/Sidebar';
 import { Main } from '../public/styles';
+import { Footer } from '../components/Footer';
 import { AggregateProvider } from '../hooks/useAggregate';
 
 import dynamic from 'next/dynamic'
@@ -21,6 +22,7 @@ export const IndexPage = () => {
         <MainSection />
         <Sidebar />
       </Main>
+      <Footer />
     </AppContainer>
   </AggregateProvider>
 )}

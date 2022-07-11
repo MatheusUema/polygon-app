@@ -8,6 +8,7 @@ export const Container = styled.div`
 
 export const InputController = styled.div`
     display: flex;
+    margin-bottom: 8px;
 `;
 
 interface ICalendarComponentProps {
